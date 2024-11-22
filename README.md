@@ -3,7 +3,9 @@
 
 Integrantes:
 José Ribeiro dos Santos Neto RM 553844
+
 Keven Ike Pereira da Silva RM 553215
+
 Vitor Cruz dos Santos RM 553621
 
 O **Energia Verde** é um aplicativo inovador que visa promover a conscientização sobre o consumo energético e a sustentabilidade. Ele permite que os usuários monitorem seu consumo de energia residencial e adotem práticas mais conscientes, contribuindo para um futuro mais sustentável.
