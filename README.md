@@ -46,9 +46,12 @@ Antes de executar o projeto, verifique se você possui as seguintes ferramentas 
    }
    ```
 4. Depois de conectar com o banco rode esses comandos no terminal para criar as tabelas e subir
-
-  - Add-migrations initdb
-  - Update-Database
+   ```
+   Add-migrations initdb
+   ```
+   ```
+   Update-Database
+   ```
 
 Obrigado por usar o Energia Verde! Juntos, podemos fazer a diferença e promover um futuro mais sustentável.
 
