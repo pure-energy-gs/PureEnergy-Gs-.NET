@@ -1,5 +1,4 @@
-# Energia Verde
-
+#Pure Energy
 ## Descrição
 
 O **Energia Verde** é um aplicativo inovador que visa promover a conscientização sobre o consumo energético e a sustentabilidade. Ele permite que os usuários monitorem seu consumo de energia residencial e adotem práticas mais conscientes, contribuindo para um futuro mais sustentável.
