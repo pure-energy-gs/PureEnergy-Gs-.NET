@@ -1,0 +1,66 @@
+﻿@model PureEnergy.Application.DTOs.ClienteDTO
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+    <h2 class="text-center text-success mb-4">Cadastro de Clientes - Energia Verde</h2>
+
+    <p class="text-center text-muted mb-4">
+        Junte-se a nós na jornada para um consumo consciente de energia. Cadastre-se e tenha controle sobre seu consumo energético!
+    </p>
+
+    <form asp-action="Create" class="border p-4 bg-light shadow-sm rounded">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <div class="form-group">
+            <label asp-for="Nome" class="font-weight-bold">Nome Completo</label>
+            <input asp-for="Nome" class="form-control" required />
+            <span asp-validation-for="Nome" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Registro" class="font-weight-bold">Número de Registro (se aplicável)</label>
+            <input asp-for="Registro" class="form-control" />
+            <span asp-validation-for="Registro" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Email" class="font-weight-bold">E-mail</label>
+            <input asp-for="Email" class="form-control" required />
+            <span asp-validation-for="Email" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="CPF" class="font-weight-bold">CPF</label>
+            <input asp-for="CPF" class="form-control" required />
+            <span asp-validation-for="CPF" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Cadastrar" class="btn btn-success btn-block font-weight-bold" />
+        </div>
+    </form>
+
+    <div class="text-center mt-3">
+        <a asp-action="Index" class="text-success font-weight-bold">Voltar à Lista</a>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #e9f7ef; /* Cor de fundo suave */
+        color: #333;
+    }
+
+    .btn-success {
+        background-color: #28a745; /* Verde para botões */
+    }
+
+        .btn-success:hover {
+            background-color: #218838; /* Verde mais escuro ao passar o mouse */
+        }
+
+    .form-group label {
+        color: #28a745; /* Rótulos em verde */
+    }
+</style>

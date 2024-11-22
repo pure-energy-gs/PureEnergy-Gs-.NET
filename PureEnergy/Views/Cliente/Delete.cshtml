@@ -1,0 +1,73 @@
+﻿@model PureEnergy.Domain.Entities.ClienteEntity
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h3 class="card-title mb-0">Detalhes do Cliente - Energia Verde</h3>
+                </div>
+                <div class="card-body">
+                    <dl class="row">
+                        <dt class="col-sm-4 font-weight-bold">@Html.DisplayNameFor(model => model.Nome)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Nome)</dd>
+
+                        <dt class="col-sm-4 font-weight-bold">@Html.DisplayNameFor(model => model.Registro)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Registro)</dd>
+
+                        <dt class="col-sm-4 font-weight-bold">@Html.DisplayNameFor(model => model.Email)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.Email)</dd>
+
+                        <dt class="col-sm-4 font-weight-bold">@Html.DisplayNameFor(model => model.CPF)</dt>
+                        <dd class="col-sm-8">@Html.DisplayFor(model => model.CPF)</dd>
+                    </dl>
+                    <p class="mt-3 text-muted">
+                        Ao monitorar seu consumo energético, você está contribuindo para um futuro mais sustentável!
+                    </p>
+                </div>
+                <div class="card-footer d-flex justify-content-between">
+                    <a asp-action="Index" class="btn btn-outline-success">Voltar à Lista</a>
+                    <form asp-action="DeleteForm" method="post" class="d-inline">
+                        <input type="hidden" name="id" value="@Model.UsuarioId" />
+                        <button type="submit" class="btn btn-danger">Excluir</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #e9f7ef; /* Cor de fundo suave */
+        color: #333;
+    }
+
+    .card {
+        border-radius: 8px;
+    }
+
+    .card-header {
+        background-color: #28a745; /* Verde para o cabeçalho */
+    }
+
+    .btn-outline-success {
+        border-color: #28a745;
+        color: #28a745;
+    }
+
+        .btn-outline-success:hover {
+            background-color: #28a745;
+            color: white;
+        }
+
+    .btn-danger {
+        background-color: #dc3545; /* Vermelho para exclusão */
+    }
+
+        .btn-danger:hover {
+            background-color: #c82333; /* Vermelho mais escuro ao passar o mouse */
+        }
+</style>

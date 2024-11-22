@@ -1,0 +1,86 @@
+﻿@model IEnumerable<PureEnergy.Domain.Entities.ClienteEntity>
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clientes - Energia Verde</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <style>
+        body {
+            background-color: #e9f7ef; /* Cor de fundo suave */
+            color: #333;
+        }
+
+        .container {
+            margin-top: 50px;
+            background-color: #ffffff; /* Fundo do container */
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #28a745; /* Verde para o título */
+        }
+
+        .table th {
+            background-color: #28a745; /* Verde para cabeçalho da tabela */
+            color: white;
+        }
+
+        .btn-info {
+            background-color: #17a2b8;
+        }
+        /* Azul para detalhes */
+        .btn-warning {
+            background-color: #ffc107;
+        }
+        /* Amarelo para editar */
+        .btn-danger {
+            background-color: #dc3545;
+        }
+        /* Vermelho para excluir */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mb-4">Clientes - Energia Verde</h2>
+
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>NOME</th>
+                    <th>CRO</th>
+                    <th>E-MAIL</th>
+                    <th>CPF</th>
+                    <th>AÇÕES</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Nome)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Registro)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Email)</td>
+                        <td>@Html.DisplayFor(modelItem => item.CPF)</td>
+                        <td>
+                            <a asp-action="Details" asp-route-id="@item.UsuarioId" class="btn btn-sm btn-info">Detalhes</a>
+                            <a asp-action="Edit" asp-route-id="@item.UsuarioId" class="btn btn-sm btn-warning">Editar</a>
+                            <a asp-action="Delete" asp-route-id="@item.UsuarioId" class="btn btn-sm btn-danger">Excluir</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        <a asp-action="Create" class="btn btn-success mb-3">Cadastrar novo cliente</a>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

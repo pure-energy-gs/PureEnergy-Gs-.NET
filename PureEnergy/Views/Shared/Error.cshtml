@@ -1,0 +1,51 @@
+﻿@model ErrorViewModel
+@{
+    ViewData["Title"] = "Erro";
+}
+
+<h1 class="text-danger">Erro</h1>
+<h2 class="text-danger">Ocorreu um erro ao processar sua solicitação.</h2>
+
+@if (Model.ShowRequestId)
+{
+    <p>
+        <strong>ID da Solicitação:</strong> <code>@Model.RequestId</code>
+    </p>
+}
+
+<h3>Modo de Desenvolvimento</h3>
+<p>
+    Alternar para o ambiente <strong>Desenvolvimento</strong> exibirá informações mais detalhadas sobre o erro que ocorreu.
+</p>
+<p>
+    <strong>O ambiente de Desenvolvimento não deve ser habilitado para aplicações implantadas.</strong>
+    Isso pode resultar na exibição de informações sensíveis de exceções para os usuários finais.
+    Para depuração local, habilite o ambiente <strong>Desenvolvimento</strong> definindo a variável de ambiente <strong>ASPNETCORE_ENVIRONMENT</strong> como <strong>Desenvolvimento</strong>
+    e reiniciando o aplicativo.
+</p>
+
+<style>
+    body {
+        background-color: #e9f7ef; /* Fundo suave verde claro */
+        color: #333; /* Texto padrão */
+        padding: 20px;
+        font-family: Arial, sans-serif; /* Fonte padrão */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .text-danger {
+        color: #dc3545; /* Vermelho para mensagens de erro */
+    }
+
+    h1, h2, h3 {
+        margin-bottom: 15px; /* Espaçamento entre os títulos */
+    }
+
+    p {
+        line-height: 1.6; /* Melhora a legibilidade */
+        margin-bottom: 20px; /* Espaçamento entre parágrafos */
+    }
+
+    code {
+        background-color: #f0f8e4; /* Fundo claro para código */
+        padding: 2px 4px

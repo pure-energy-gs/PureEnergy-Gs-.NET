@@ -1,0 +1,83 @@
+﻿@model PureEnergy.Domain.Entities.ClienteEntity
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-header bg-success text-white">
+                    <h3 class="card-title mb-0">Editar Detalhes do Cliente - Energia Verde</h3>
+                </div>
+                <form asp-action="Edit" method="post">
+                    <div class="card-body">
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-form-label font-weight-bold">@Html.DisplayNameFor(model => model.Nome)</label>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.Nome, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-form-label font-weight-bold">@Html.DisplayNameFor(model => model.Registro)</label>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.Registro, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-form-label font-weight-bold">@Html.DisplayNameFor(model => model.Email)</label>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-sm-4 col-form-label font-weight-bold">@Html.DisplayNameFor(model => model.CPF)</label>
+                            <div class="col-sm-8">
+                                @Html.EditorFor(model => model.CPF, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer d-flex justify-content-between">
+                        <a asp-action="Index" class="btn btn-outline-success">Voltar à Lista</a>
+                        <button type="submit" class="btn btn-success">Salvar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    body {
+        background-color: #e9f7ef; /* Cor de fundo suave */
+        color: #333;
+    }
+
+    .card {
+        border-radius: 8px;
+    }
+
+    .card-header {
+        background-color: #28a745; /* Verde para o cabeçalho */
+    }
+
+    .btn-outline-success {
+        border-color: #28a745;
+        color: #28a745;
+    }
+
+        .btn-outline-success:hover {
+            background-color: #28a745;
+            color: white;
+        }
+
+    .btn-success {
+        background-color: #28a745; /* Verde para o botão de salvar */
+    }
+
+    .form-group label {
+        color: #28a745; /* Rótulos em verde */
+    }
+</style>
