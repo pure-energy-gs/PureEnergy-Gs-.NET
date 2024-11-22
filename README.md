@@ -38,11 +38,14 @@ Antes de executar o projeto, verifique se você possui as seguintes ferramentas 
    cd energia-verde
 
 2. ## Tecnologias Utilizadas
-  "ConnectionStrings": {
-      "DefaultConnection": "Server=seuservidor;Database=energiasustentavel;Trusted_Connection=True;"
-  }
-
-3. Depois de conectar com o banco rode esses comandos no terminal para criar as tabelas e subir
+   ```
+   {
+     "ConnectionStrings": {
+         "DefaultConnection": "Server=seuservidor;Database=energiasustentavel;Trusted_Connection=True;"
+      }
+   }
+   ```
+4. Depois de conectar com o banco rode esses comandos no terminal para criar as tabelas e subir
 
   - Add-migrations initdb
   - Update-Database
