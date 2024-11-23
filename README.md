@@ -67,7 +67,7 @@ sudo docker start d3664b4782d6
 7- cria uma build do docker a partir do dockerfile do projeto
 ```sudo docker build -t pureenergy-dotnet .```
 
-8- cria um container com a imagem criada e roda na porta 8080
+8- cria um container com a imagem criada e roda na porta 8081
 ```sudo docker run -d -p 8081:8080 --name pureenergy-app pureenergy-dotnet```
 
 O **Energia Verde** é um aplicativo inovador que visa promover a conscientização sobre o consumo energético e a sustentabilidade. Ele permite que os usuários monitorem seu consumo de energia residencial e adotem práticas mais conscientes, contribuindo para um futuro mais sustentável.
